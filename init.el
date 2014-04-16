@@ -28,9 +28,6 @@
 ;;(tool-bar-mode nil)                                           ;Do not show toolbar
 (scroll-bar-mode nil)                                          ;Do not show scrollbar
 (mouse-avoidance-mode 'animate)                                ;Mouse avoidance
-(setq indent-tabs-mode nil)
-(setq tab-width 4)
-(setq default-tab-width 4)
 (which-func-mode t)
 (setq-default make-backup-files nil)
 (show-paren-mode t)
@@ -39,7 +36,15 @@
 (server-start)
 (setq scroll-margin 3 scroll-conservatively 10000)
 
-(setq c-default-style `((java-mode . "java") (awk-mode . "awk") (other . "stroustrup")))
+(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
+(setq default-tab-width 4)
+(setq tab-width 4)
+
+(setq c-default-style "bsd"
+      c-basic-offset 4)
+
+;; (setq c-default-style `((java-mode . "java") (awk-mode . "awk") (other . "stroustrup")))
 
 
 
@@ -74,12 +79,12 @@
  ;; If there is more than one, they won't work right.
  )
 
+(require 'init-package)
 (require 'init-cmake-mode)
 (require 'init-cedet)
 (require 'init-tramp)
 (require 'init-single-dired)
-(require 'init-package)
-(require 'init-proxy)
+;;(require 'init-proxy)
 (require 'init-windows-frame)
 (require 'init-qian-comment)
 (require 'init-font)
