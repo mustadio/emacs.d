@@ -1,4 +1,4 @@
-(setq emacs-base-driver "d:/")
+;;(setq emacs-base-driver "d:/")
 
 (setq emacs-load-start-time (current-time))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d"))
@@ -51,7 +51,7 @@
 (global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
 (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
 
-(cd "e:/")
+
 
 
 ;;(require 'w32-browser)
@@ -84,12 +84,13 @@
 (require 'init-cedet)
 (require 'init-tramp)
 (require 'init-single-dired)
-;;(require 'init-proxy)
+(require 'init-proxy)
 (require 'init-windows-frame)
 (require 'init-qian-comment)
 (require 'init-font)
 
 
-(if *win32*
+(when *win32*
 	(w32-maximize-frame)
+    (cd "e:/")
   )
