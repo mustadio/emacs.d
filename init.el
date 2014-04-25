@@ -41,10 +41,11 @@
 (setq default-tab-width 4)
 (setq tab-width 4)
 
-(setq c-default-style "bsd"
-      c-basic-offset 4)
+;; (setq c-default-style "bsd"
+      ;; c-basic-offset 4)
 
-;; (setq c-default-style `((java-mode . "java") (awk-mode . "awk") (other . "stroustrup")))
+(setq c-default-style `((java-mode . "java") (awk-mode . "awk") (other . "stroustrup"))
+      c-basic-offset 4)
 
 
 
