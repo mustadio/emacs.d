@@ -82,13 +82,14 @@
 
 (require 'init-package)
 (require 'init-cmake-mode)
-(require 'init-cedet)
+;; (require 'init-cedet)
 (require 'init-tramp)
 (require 'init-single-dired)
 (require 'init-proxy)
 (require 'init-windows-frame)
 (require 'init-qian-comment)
 (require 'init-font)
+(load "~/.emacs.d/init-cedet")
 
 
 (when *win32*
