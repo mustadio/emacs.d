@@ -28,13 +28,28 @@
 ;; load contrib library
 ;; (require 'eassist)
 
+(defconst cedet-user-include-dirs
+  (list ".." "../include" "../inc" "../common" "../public"
+        "../.." "../../include" "../../inc" "../../common" "../../public"))
 
-(semantic-add-system-include
- "D:/MinGW/mingw32/include" 'c-mode)
-(semantic-add-system-include
- "D:/MinGW/mingw32/include" 'c++-mode)
-(semantic-add-system-include
- "D:/MinGW/lib/gcc/mingw32/4.8.1/include/c++" 'c++-mode)
+(defconst cedet-win32-include-dirs
+  (list "D:/MinGW/mingw32/include"
+        "D:/MinGW/lib/gcc/mingw32/4.8.1/include/c++"))
+
+(let ((include-dirs cedet-user-include-dirs))
+  (when (eq system-type 'windows-nt)
+    (setq include-dirs (append include-dirs cedet-win32-include-dirs)))
+  (mapc (lambda (dir)
+          (semantic-add-system-include dir 'c++-mode)
+          (semantic-add-system-include dir 'c-mode))
+        include-dirs))
+
+;; (semantic-add-system-include
+;;  "D:/MinGW/mingw32/include" 'c-mode)
+;; (semantic-add-system-include
+;;  "D:/MinGW/mingw32/include" 'c++-mode)
+;; (semantic-add-system-include
+;;  "D:/MinGW/lib/gcc/mingw32/4.8.1/include/c++" 'c++-mode)
  
 ;; customisation of modes
 (defun alexott/cedet-hook ()
