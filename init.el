@@ -32,7 +32,8 @@
 (setq-default make-backup-files nil)
 (show-paren-mode t)
 (transient-mark-mode t)
-(set-message-beep 'silent)
+;;(set-message-beep 'silent)
+(setq visible-bell t)
 (server-start)
 (setq scroll-margin 3 scroll-conservatively 10000)
 
@@ -53,6 +54,9 @@
 (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
 
 
+(setq frame-title-format
+      (list (format "%s %%S: %%j " (system-name))
+        '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
 
 
 ;;(require 'w32-browser)
