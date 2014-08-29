@@ -46,13 +46,14 @@
 
 (setq c-default-style `((java-mode . "java") (awk-mode . "awk") (other . "stroustrup"))
       c-basic-offset 4)
+(setq python-indent-offset 4)
 
 
 
 (global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
 (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
 
-
+(prefer-coding-system 'utf-8-unix)
 
 
 ;;(require 'w32-browser)
@@ -89,7 +90,7 @@
 (require 'init-windows-frame)
 (require 'init-qian-comment)
 (require 'init-font)
-(load "~/.emacs.d/init-cedet")
+;;(load "~/.emacs.d/init-cedet")
 
 
 (when *win32*
