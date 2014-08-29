@@ -47,6 +47,7 @@
 
 (setq c-default-style `((java-mode . "java") (awk-mode . "awk") (other . "stroustrup"))
       c-basic-offset 4)
+(setq python-indent-offset 4)
 
 
 
@@ -57,6 +58,8 @@
 (setq frame-title-format
       (list (format "%s %%S: %%j " (system-name))
         '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+
+(prefer-coding-system 'utf-8-unix)
 
 
 ;;(require 'w32-browser)
@@ -93,7 +96,7 @@
 (require 'init-windows-frame)
 (require 'init-qian-comment)
 (require 'init-font)
-(load "~/.emacs.d/init-cedet")
+;;(load "~/.emacs.d/init-cedet")
 
 
 (when *win32*
