@@ -41,6 +41,7 @@
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
 (setq tab-width 4)
+(tool-bar-mode -1)
 
 ;; (setq c-default-style "bsd"
       ;; c-basic-offset 4)
