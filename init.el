@@ -90,6 +90,7 @@
 (require 'init-windows-frame)
 (require 'init-qian-comment)
 (require 'init-font)
+(require 'init-auctex)
 ;;(load "~/.emacs.d/init-cedet")
 
 
