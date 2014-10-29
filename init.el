@@ -34,7 +34,7 @@
 (transient-mark-mode t)
 ;;(set-message-beep 'silent)
 (setq visible-bell t)
-(server-start)
+;; (server-start)
 (setq scroll-margin 3 scroll-conservatively 10000)
 
 (setq indent-tabs-mode nil)
@@ -62,6 +62,7 @@
 
 (prefer-coding-system 'utf-8-unix)
 
+(electric-pair-mode 1)
 
 ;;(require 'w32-browser)
 ;;(eval-after-load "dired"
@@ -73,20 +74,21 @@
 ;;(dired-get-filename))))))
 
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
- '(custom-enabled-themes (quote (gnome2)))
- '(custom-safe-themes (quote ("a405a0c2ec845e34ecb32a83f477ca36d1858b976f028694e0ee7ff4af33e400" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(load-theme 'gnome2 t)
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(ansi-color-names-vector ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
+;;  '(custom-enabled-themes (quote (gnome2)))
+;;  '(custom-safe-themes (quote ("41ce22881b4328fe83d5adde4776498883702b0a92995668f00d865842f5cf81" "a405a0c2ec845e34ecb32a83f477ca36d1858b976f028694e0ee7ff4af33e400" default))))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  )
 
 (require 'init-package)
 (require 'init-cmake-mode)
@@ -99,7 +101,8 @@
 (require 'init-font)
 (require 'init-auctex)
 ;;(load "~/.emacs.d/init-cedet")
-
+(require 'yasnippet)
+(yas-global-mode 1)
 
 (when *win32*
 	(w32-maximize-frame)
