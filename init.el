@@ -25,7 +25,8 @@
 (display-time)                    
 (setq display-time-day-and-date t)                             ;Show date and time 
 (setq column-number-mode t)                                    ;Show column number
-;;(tool-bar-mode nil)                                           ;Do not show toolbar
+(global-linum-mode 1)                                          ;Show line number
+;;(tool-bar-mode nil)                                          ;Do not show toolbar
 (scroll-bar-mode nil)                                          ;Do not show scrollbar
 (mouse-avoidance-mode 'animate)                                ;Mouse avoidance
 (which-func-mode t)
