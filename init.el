@@ -1,7 +1,7 @@
 ;;(setq emacs-base-driver "d:/")
 
 (setq emacs-load-start-time (current-time))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
 
 (setq *spell-check-support-enabled* t)
@@ -65,6 +65,11 @@
 
 (electric-pair-mode 1)
 
+(defalias 'list-buffers 'ibuffer)
+
+;; make buffer switch command auto suggestions, also for find-file command
+(ido-mode 1)
+
 ;;(require 'w32-browser)
 ;;(eval-after-load "dired"
 ;;'(define-key dired-mode-map [f10] (lambda ()
@@ -102,8 +107,14 @@
 (require 'init-font)
 (require 'init-auctex)
 ;;(load "~/.emacs.d/init-cedet")
+
 (require 'yasnippet)
 (yas-global-mode 1)
+
+(setq inhibit-splash-screen t)
+(require 'bookmark)
+(bookmark-bmenu-list)
+(switch-to-buffer "*Bookmark List*")
 
 (when *win32*
 	(w32-maximize-frame)
