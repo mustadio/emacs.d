@@ -8,10 +8,10 @@
  
 ;; Do checkout of fresh CEDET, and use this config (don't forget to change path below)
  
-;; (setq cedet-root-path (file-name-as-directory "~/projects/cedet-bzr/"))
+(setq cedet-root-path (file-name-as-directory "~/cedet/"))
  
-;; (load-file (concat cedet-root-path "cedet-devel-load.el"))
-;; (add-to-list 'load-path (concat cedet-root-path "contrib"))
+(load-file (concat cedet-root-path "cedet-devel-load.el"))
+(add-to-list 'load-path (concat cedet-root-path "contrib"))
  
 ;; select which submodes we want to activate
 (add-to-list 'semantic-default-submodes 'global-semantic-mru-bookmark-mode)
