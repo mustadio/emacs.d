@@ -8,7 +8,7 @@
  
 ;; Do checkout of fresh CEDET, and use this config (don't forget to change path below)
  
-(setq cedet-root-path (file-name-as-directory "~/cedet/"))
+(setq cedet-root-path (file-name-as-directory "~/.emacs.d/cedet/"))
  
 (load-file (concat cedet-root-path "cedet-devel-load.el"))
 (add-to-list 'load-path (concat cedet-root-path "contrib"))
@@ -33,8 +33,8 @@
         "../.." "../../include" "../../inc" "../../common" "../../public"))
 
 (defconst cedet-win32-include-dirs
-  (list "D:/MinGW/mingw32/include"
-        "D:/MinGW/lib/gcc/mingw32/4.8.1/include/c++"))
+  (list "E:/cygwin/usr/include"
+        "E:/cygwin/lib/gcc/i686-pc-cygwin/4.8.3/include"))
 
 (let ((include-dirs cedet-user-include-dirs))
   (when (eq system-type 'windows-nt)
@@ -102,3 +102,4 @@
  
 ;; Setup JAVA....
 ;; (require 'cedet-java)
+(provide 'init-cedet)

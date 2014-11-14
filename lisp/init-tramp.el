@@ -6,8 +6,6 @@
   (setq tramp-default-user "pi"
         tramp-default-host "192.168.2.174"))
 
-(setq tramp-default-method "plink")
-
 (when *win32*
   (setq tramp-default-method "plink")
   )

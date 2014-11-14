@@ -1,4 +1,4 @@
-(when (string-equal system-type "windows-nt")
+(when (string-equal system-name "S12682")
   (let (
         (mypaths
          '(

@@ -6,3 +6,6 @@ server/
 srecode-map.el
 bookmarks
 ido.last
+cedet/
+semanticdb/
+ede-projects.el

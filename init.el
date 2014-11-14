@@ -96,9 +96,16 @@
 ;;  ;; If there is more than one, they won't work right.
 ;;  )
 
+(setq inhibit-splash-screen t)
+(require 'bookmark)
+(bookmark-bmenu-list)
+(switch-to-buffer "*Bookmark List*")
+
+
+
 (require 'init-package)
 (require 'init-cmake-mode)
-;; (require 'init-cedet)
+(require 'init-cedet)
 (require 'init-tramp)
 (require 'init-single-dired)
 (require 'init-proxy)
@@ -106,15 +113,11 @@
 (require 'init-qian-comment)
 (require 'init-font)
 (require 'init-auctex)
-;;(load "~/.emacs.d/init-cedet")
+(require 'init-path)
+;; (load "~/.emacs.d/init-cedet")
 
 (require 'yasnippet)
 (yas-global-mode 1)
-
-(setq inhibit-splash-screen t)
-(require 'bookmark)
-(bookmark-bmenu-list)
-(switch-to-buffer "*Bookmark List*")
 
 (when *win32*
 	(w32-maximize-frame)
