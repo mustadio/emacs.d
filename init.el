@@ -63,7 +63,7 @@
 
 (prefer-coding-system 'utf-8-unix)
 
-(electric-pair-mode 1)
+;; (electric-pair-mode 1)
 
 (defalias 'list-buffers 'ibuffer)
 
@@ -101,7 +101,7 @@
 (bookmark-bmenu-list)
 (switch-to-buffer "*Bookmark List*")
 
-
+(toggle-frame-maximized)
 
 (require 'init-package)
 (require 'init-cmake-mode)
@@ -114,12 +114,12 @@
 (require 'init-font)
 (require 'init-auctex)
 (require 'init-path)
-;; (load "~/.emacs.d/init-cedet")
+(require 'init-bracket-pair)
+;; (load "~/.emacs.d/lisp/init-project")
 
 (require 'yasnippet)
 (yas-global-mode 1)
 
-(when *win32*
-	(w32-maximize-frame)
-    (cd "e:/")
-  )
+(require 'graphviz-dot-mode)
+
+

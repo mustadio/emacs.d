@@ -14,42 +14,54 @@
 (add-to-list 'load-path (concat cedet-root-path "contrib"))
  
 ;; select which submodes we want to activate
+(add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
 (add-to-list 'semantic-default-submodes 'global-semantic-mru-bookmark-mode)
-(add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
-(add-to-list 'semantic-default-submodes 'global-semantic-idle-scheduler-mode)
-(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
-;; (add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode)
+(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode)
 (add-to-list 'semantic-default-submodes 'global-semantic-highlight-func-mode)
-(add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
- 
+(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+(add-to-list 'semantic-default-submodes 'global-semantic-idle-scheduler-mode)
+
+
 ;; Activate semantic
 (semantic-mode 1)
+
+(require 'semantic/ia)
  
 ;; load contrib library
-;; (require 'eassist)
+(require 'eassist)
 
 (defconst cedet-user-include-dirs
   (list ".." "../include" "../inc" "../common" "../public"
         "../.." "../../include" "../../inc" "../../common" "../../public"))
 
-(defconst cedet-win32-include-dirs
+(when (string-equal system-name "S12682")
+  (defconst cedet-system-include-dirs
   (list "E:/cygwin/usr/include"
-        "E:/cygwin/lib/gcc/i686-pc-cygwin/4.8.3/include"))
+        "E:/cygwin/lib/gcc/i686-pc-cygwin/4.8.3/include")))
 
-(let ((include-dirs cedet-user-include-dirs))
+(when (string-equal system-name "shenqian")
+  (defconst cedet-system-include-dirs
+  (list "E:/cygwin/usr/include"
+        "E:/cygwin/lib/gcc/i686-pc-cygwin/4.8.3/include")))
+
+;; (defun cedet-include-hook ()
+;;   (let ((include-dirs cedet-user-include-dirs))
+;;   (when (eq system-type 'windows-nt)
+;;     (setq include-dirs (append include-dirs cedet-win32-include-dirs)))
+;;   (mapc (lambda (dir)
+;;           (semantic-add-system-include dir 'c++-mode)
+;;           (semantic-add-system-include dir 'c-mode))
+;;         include-dirs)))
+
+
+(defun cedet-c-include-hook ()
   (when (eq system-type 'windows-nt)
-    (setq include-dirs (append include-dirs cedet-win32-include-dirs)))
-  (mapc (lambda (dir)
-          (semantic-add-system-include dir 'c++-mode)
-          (semantic-add-system-include dir 'c-mode))
-        include-dirs))
+    (setq cedet-user-include-dirs (append cedet-user-include-dirs cedet-system-include-dirs)))
+  (setq semantic-c-dependency-system-include-path cedet-user-include-dirs))
 
-;; (semantic-add-system-include
-;;  "D:/MinGW/mingw32/include" 'c-mode)
-;; (semantic-add-system-include
-;;  "D:/MinGW/mingw32/include" 'c++-mode)
-;; (semantic-add-system-include
-;;  "D:/MinGW/lib/gcc/mingw32/4.8.1/include/c++" 'c++-mode)
+(add-hook 'c-mode-common-hook 'cedet-c-include-hook)
+
+
  
 ;; customisation of modes
 (defun alexott/cedet-hook ()
