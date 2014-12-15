@@ -109,7 +109,6 @@
 (require 'init-tramp)
 (require 'init-single-dired)
 (require 'init-proxy)
-(require 'init-windows-frame)
 (require 'init-qian-comment)
 (require 'init-font)
 (require 'init-auctex)
