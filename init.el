@@ -63,7 +63,7 @@
 
 (prefer-coding-system 'utf-8-unix)
 
-;; (electric-pair-mode 1)
+(electric-pair-mode 1)
 
 (defalias 'list-buffers 'ibuffer)
 
