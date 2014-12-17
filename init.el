@@ -105,7 +105,6 @@
 
 (require 'init-package)
 (require 'init-cmake-mode)
-(require 'init-cedet)
 (require 'init-tramp)
 (require 'init-single-dired)
 (require 'init-proxy)
@@ -114,6 +113,7 @@
 (require 'init-auctex)
 (require 'init-path)
 (require 'init-bracket-pair)
+;;(require 'init-cedet)
 ;; (load "~/.emacs.d/lisp/init-project")
 
 (require 'yasnippet)
