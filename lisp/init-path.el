@@ -15,8 +15,8 @@
     (setq exec-path (append mypaths (list "." exec-directory)) )
     ) )
 
-(when *win32*
-  (add-to-list 'Info-directory-list (concat (getenv "emacs_dir") "/share/info"))
-  )
+;; (when *win32*
+;;   (add-to-list 'Info-directory-list (concat (getenv "emacs_dir") "/share/info"))
+;;   )
 
 (provide 'init-path)
