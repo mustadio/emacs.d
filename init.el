@@ -80,7 +80,7 @@
 ;;(dired-get-filename))))))
 
 
-(load-theme 'gnome2 t)
+;; (load-theme 'gnome2 t)
 ;; (custom-set-variables
 ;;  ;; custom-set-variables was added by Custom.
 ;;  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -120,5 +120,5 @@
 (yas-global-mode 1)
 
 (require 'graphviz-dot-mode)
-
+(require 'darcula-theme)
 
