@@ -113,6 +113,7 @@
 (require 'init-auctex)
 (require 'init-path)
 (require 'init-bracket-pair)
+;; (require 'init-org)
 ;;(require 'init-cedet)
 ;; (load "~/.emacs.d/lisp/init-project")
 
