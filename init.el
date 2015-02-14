@@ -80,21 +80,7 @@
 ;;(dired-get-filename))))))
 
 
-;; (load-theme 'gnome2 t)
-;; (custom-set-variables
-;;  ;; custom-set-variables was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  '(ansi-color-names-vector ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
-;;  '(custom-enabled-themes (quote (gnome2)))
-;;  '(custom-safe-themes (quote ("41ce22881b4328fe83d5adde4776498883702b0a92995668f00d865842f5cf81" "a405a0c2ec845e34ecb32a83f477ca36d1858b976f028694e0ee7ff4af33e400" default))))
-;; (custom-set-faces
-;;  ;; custom-set-faces was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  )
+
 
 (setq inhibit-splash-screen t)
 (require 'bookmark)
@@ -121,5 +107,4 @@
 (yas-global-mode 1)
 
 (require 'graphviz-dot-mode)
-(require 'darcula-theme)
-
+(load-theme 'misterioso)
