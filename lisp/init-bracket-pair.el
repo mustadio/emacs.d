@@ -69,7 +69,7 @@ The argument φleft-bracket φright-bracket are strings."
 (global-set-key (kbd "<apps> s") 'xah-insert-bracket) ; []
 (global-set-key (kbd "<apps> ,") 'xah-insert-greater-less) ; <>
 (global-set-key (kbd "<apps> '") 'xah-insert-ascii-single-quote) ; ''
-(global-set-key (kbd "<apps> ;") 'xah-insert-ascii-double-quote) ; <>
+(global-set-key (kbd "<apps> ;") 'xah-insert-ascii-double-quote) ; ""
 
 
 (provide 'init-bracket-pair)
