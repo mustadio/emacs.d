@@ -43,6 +43,7 @@
 (setq default-tab-width 4)
 (setq tab-width 4)
 (tool-bar-mode -1)
+(menu-bar-mode -1)
 
 ;; (setq c-default-style "bsd"
       ;; c-basic-offset 4)
@@ -107,4 +108,4 @@
 (yas-global-mode 1)
 
 (require 'graphviz-dot-mode)
-(load-theme 'misterioso)
+(load-theme 'wombat t)

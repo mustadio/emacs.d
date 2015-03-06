@@ -4,7 +4,7 @@
 loaded."
 ;; <add other stuff here>
 (define-key dired-mode-map "f" 'joc-dired-single-buffer)
-(define-key dired-mode-map [return] 'joc-dired-single-buffer)
+(define-key dired-mode-map (kbd "RET") 'joc-dired-single-buffer)
 (define-key dired-mode-map [mouse-1] 'joc-dired-single-buffer-mouse)
 (define-key dired-mode-map "^"
 (function
