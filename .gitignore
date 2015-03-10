@@ -11,3 +11,4 @@ semanticdb/
 ede-projects.el
 lisp/init-project.el
 elpa/gnupg/
+custom.el

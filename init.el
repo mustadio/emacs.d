@@ -81,14 +81,15 @@
 ;;(dired-get-filename))))))
 
 
-
-
 (setq inhibit-splash-screen t)
 (require 'bookmark)
 (bookmark-bmenu-list)
 (switch-to-buffer "*Bookmark List*")
 
 (toggle-frame-maximized)
+
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
 
 (require 'init-package)
 (require 'init-cmake-mode)
@@ -100,6 +101,7 @@
 (require 'init-auctex)
 (require 'init-path)
 (require 'init-bracket-pair)
+(require 'init-c-ide)
 ;; (require 'init-org)
 ;;(require 'init-cedet)
 ;; (load "~/.emacs.d/lisp/init-project")
@@ -109,3 +111,5 @@
 
 (require 'graphviz-dot-mode)
 (load-theme 'wombat t)
+
+(require 'magit)
