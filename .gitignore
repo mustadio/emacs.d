@@ -8,7 +8,7 @@ bookmarks
 ido.last
 cedet/
 semanticdb/
-ede-projects.el
+lisp/ede-projects.el
 lisp/init-project.el
 elpa/gnupg/
 custom.el
