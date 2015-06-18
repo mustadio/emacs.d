@@ -20,12 +20,11 @@
 
 
 (setq inhibit-startup-message t)                               ;Do not show startup message
-(line-number-mode t)                                           ;Show line number
 (setq display-time-24hr-format t)   
 (display-time)                    
 (setq display-time-day-and-date t)                             ;Show date and time 
 (setq column-number-mode t)                                    ;Show column number
-(global-linum-mode 1)                                          ;Show line number
+
 ;;(tool-bar-mode nil)                                          ;Do not show toolbar
 (scroll-bar-mode nil)                                          ;Do not show scrollbar
 (mouse-avoidance-mode 'animate)                                ;Mouse avoidance
@@ -102,6 +101,7 @@
 (require 'init-path)
 (require 'init-bracket-pair)
 (require 'init-c-ide)
+(require 'init-linum-off)
 ;; (require 'init-org)
 ;;(require 'init-cedet)
 ;; (load "~/.emacs.d/lisp/init-project")
@@ -113,3 +113,4 @@
 (load-theme 'wombat t)
 
 (require 'magit)
+(require 'ztree-diff)
