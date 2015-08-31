@@ -52,7 +52,6 @@
 (setq python-indent-offset 4)
 
 
-
 (global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
 (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
 
@@ -79,7 +78,6 @@
 ;;"/" "\\"
 ;;(dired-get-filename))))))
 
-
 (setq inhibit-splash-screen t)
 (require 'bookmark)
 (bookmark-bmenu-list)
@@ -103,8 +101,6 @@
 (require 'init-c-ide)
 (require 'init-linum-off)
 ;; (require 'init-org)
-;;(require 'init-cedet)
-;; (load "~/.emacs.d/lisp/init-project")
 
 (require 'yasnippet)
 (yas-global-mode 1)
@@ -114,3 +110,7 @@
 
 (require 'magit)
 (require 'ztree-diff)
+
+
+
+
