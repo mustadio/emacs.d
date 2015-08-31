@@ -64,12 +64,19 @@ The argument φleft-bracket φright-bracket are strings."
 ;; (when (string-equal system-type "windows-nt")
 ;;   (define-key key-translation-map (kbd "<apps>") (kbd "<menu>")))
 
-(global-set-key (kbd "<apps> f") 'xah-insert-brace) ; {}
-(global-set-key (kbd "<apps> d") 'xah-insert-paren) ; ()
-(global-set-key (kbd "<apps> s") 'xah-insert-bracket) ; []
-(global-set-key (kbd "<apps> ,") 'xah-insert-greater-less) ; <>
-(global-set-key (kbd "<apps> '") 'xah-insert-ascii-single-quote) ; ''
-(global-set-key (kbd "<apps> ;") 'xah-insert-ascii-double-quote) ; ""
+;; (global-set-key (kbd "<apps> f") 'xah-insert-brace) ; {}
+;; (global-set-key (kbd "<apps> d") 'xah-insert-paren) ; ()
+;; (global-set-key (kbd "<apps> s") 'xah-insert-bracket) ; []
+;; (global-set-key (kbd "<apps> ,") 'xah-insert-greater-less) ; <>
+;; (global-set-key (kbd "<apps> '") 'xah-insert-ascii-single-quote) ; ''
+;; (global-set-key (kbd "<apps> ;") 'xah-insert-ascii-double-quote) ; ""
+
+(global-set-key (kbd "C-c f") 'xah-insert-brace) ;{}
+(global-set-key (kbd "C-c d") 'xah-insert-paren) ; ()
+(global-set-key (kbd "C-c s") 'xah-insert-bracket) ; []
+(global-set-key (kbd "C-c ,") 'xah-insert-greater-less) ; <>
+(global-set-key (kbd "C-c '") 'xah-insert-ascii-single-quote) ; ''
+(global-set-key (kbd "C-c ;") 'xah-insert-ascii-double-quote) ; "")
 
 
 (provide 'init-bracket-pair)
