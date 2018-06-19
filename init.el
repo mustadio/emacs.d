@@ -34,7 +34,7 @@
 (transient-mark-mode t)
 ;;(set-message-beep 'silent)
 (setq visible-bell t)
-;; (server-start)
+(server-start)
 (setq scroll-margin 3 scroll-conservatively 10000)
 
 (setq indent-tabs-mode nil)
@@ -82,6 +82,8 @@
 (require 'bookmark)
 (bookmark-bmenu-list)
 (switch-to-buffer "*Bookmark List*")
+
+(setenv "GIT_ASKPASS" "git-gui--askpass")
 
 (toggle-frame-maximized)
 

@@ -5,7 +5,7 @@
            "E:/Python27"
            "e:/graphviz/bin"
            "E:/cygwin/bin"
-
+           "D:/Backups/git/bin"
            "C:/Users/h3/AppData/Local/Google/Chrome/Application"
            ) )
         )
